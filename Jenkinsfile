@@ -2,17 +2,11 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "dockerhubusername/jenkins-app"
+        IMAGE_NAME = "sagar2903/jenkins-app"
         TAG = "latest"
     }
 
     stages {
-
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/yourusername/jenkins-docker-app.git'
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
